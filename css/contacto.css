@@ -1,0 +1,286 @@
+#contacto {
+    border: 1px groove #c4c4c7;
+    width: 97vw;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4.5vw;
+    text-shadow: 0 0 7px black;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    margin: 3.2vh 7.5vw;
+}
+
+.information {
+    display: block;
+    flex: 1;
+    height: 100%;
+}
+
+.information h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5vw;
+    font-weight: lighter;
+}
+
+.information h3, p {
+    font-family: sans-serif;
+}
+
+.information h3 {
+    font-style: italic;
+    font-size: 0.9vw;
+}
+
+.information p {
+    font-size: 0.83vw;
+    text-align: justify;
+}
+
+.information h2 {
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.information i {
+    margin: 0 1%;
+    color: rgb(90, 90, 189);
+}
+
+.information a {
+    color: black;
+    font-size: 1.1vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.social-circle-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-circle {
+    position: relative;
+    border: 3px solid #b86f28;
+    background: repeating-radial-gradient(circle at bottom left, #955c22, #b86f28, white);
+    opacity: 0.9;
+    border-radius: 50%;
+    width: 32%;
+    aspect-ratio: 1 / 1;
+}
+
+.social-circle .logo {
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    filter: brightness(1.2) sepia(0.1) saturate(5);
+}
+
+.social-circle .icon {
+    height: 17%;
+    width: 17%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 3;
+}
+
+.social-circle #twitter {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.social-circle #instagram {
+    top: 35%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
+.social-circle #whatsapp {
+    top: 35%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.social-circle #facebook {
+    top: 80%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.social-circle #telegram {
+    top: 80%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: auto;
+}
+
+.form .textbox {
+    border: 2px solid red;
+    background-color: #dfadad;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 1.5% 2%;
+    margin: 0 4% 2% 4%;
+    text-decoration: none;
+    color: red;
+}
+
+#message {
+    height: 30%;
+    width: 87.5%;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+#message::placeholder {
+    position: absolute;
+    left: 2%;
+    top: 7%;
+    text-align: left;
+    vertical-align: top;
+}
+
+.textbox::placeholder {
+    color: red;
+    font-weight: bold;
+}
+
+.form #theme {
+    border: 2px solid #b86f28;
+    border-radius: 5px;
+    padding: 1.5% 2%;
+    margin: 0 4% 2% 4%;
+    text-decoration: none;
+}
+
+.form #theme::placeholder {
+    color: #b86f28;
+    font-weight: bold; 
+}
+
+.conditions {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 2% 0% 1% 3%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.conditions input {
+    margin-right:1%;
+}
+
+.send-button {
+    margin: 4% 4% 2% 4%;
+    width: 91%;
+}
+
+.send-button button {
+    border: none;
+    border-radius: 5px;
+    padding: 2% 0;
+    color: white;
+    background-color: #b86f28;
+    font-weight: bold;
+    width: 100%;
+}
+
+.conditions a {
+    color: blue;
+    padding-left: 1%;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column-reverse;
+    }
+
+    .form {
+        border: 2px solid #b86f28;
+        padding: 2.5% 0;
+    }
+
+    .form .textbox {
+        margin: 0 2%;
+        margin-bottom: 2%;
+    }
+
+    .form #theme {
+        margin: 0 2%;
+        margin-bottom: 2%;
+    }
+
+    .form #message {
+        margin: 0 2%;
+        width: 91.5%;
+        height: 30vh;
+    }
+
+    .conditions {
+        margin: 2% 2% 1% 2%;
+    }
+
+    .form .send-button {
+        margin: 1% 2% 0 2%;
+        width: 96%;
+    }
+
+    .send-button button {
+        padding: 1% 0;
+    }
+
+    .information h1 {
+        font-size: 4.5vw;
+    }
+
+    .information h3 {
+        font-size: 1.7vw;
+    }
+
+    .information p {
+        font-size: 1.65vw;
+    }
+
+    .information i, .information a{
+        font-size: 1.7vw;
+    }
+
+    .social-circle {
+        width: 20%;
+    }
+}

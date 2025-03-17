@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    margin: 2% 6%;
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid black;
+    filter: grayscale(1);
+    height: auto;
+    padding: 0;
+}
+
+.product-card:hover {
+    filter: grayscale(0);
+    box-shadow: 0 0 10px black;
+}
+
+.top-info {
+    padding-bottom: 3%;
+}
+
+.product-image {
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    color: black;
+    font-family: 'Lucida Sans';
+    height: 100%;
+    padding: 0 6%;
+}
+
+.product-info h1 {
+    font-size: 2.2vw;
+    margin: 0;
+}
+
+.product-info p {
+    text-align: justify;
+    font-size: 0.65vw;
+    color: #aea196;
+}
+
+.product-overview {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Acari Sans Light';
+    src: url('../sources/fonts/AcariSans/AcariSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.price-box {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: left;
+    align-items: center;
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.product-info .price {
+    font-family: 'Acari Sans Light', sans-serif;
+    color: black;
+    font-size: 1vw;
+    font-weight: bold;
+    margin: 0;
+}
+
+ #reduced {
+    color: red;
+    font-size: 0.5vw;
+    text-decoration: line-through;
+    padding: 30px 0;
+    margin-left: 10%;
+}
+
+
+.product-info .category {
+    border: none;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 1vw;
+    background-color: #d3d3d3;
+    padding: 3% 4%;
+    margin: 7% 0;
+}
+
+.color-picker {
+    display: flex;
+    width: 30%;
+    gap: 5px;
+    flex-direction: row;
+    justify-content:start; 
+    align-items: center;
+}
+
+.color-picker button {
+    border: none;
+    border-radius: 50%;
+    gap: 100px;
+    aspect-ratio: 1 / 1;
+    height: 50%;
+    width: auto;
+    box-shadow: 0 0 10px black;
+}
+
+.color-picker #black {
+    background-color: black;
+}
+
+.color-picker #yellow {
+    background-color: #ffbd59;
+}
+
+.color-picker #red {
+    background-color: #ff3131;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .product-image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .top-info {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .product-info h1 {
+        font-size: 2.6vw;
+        margin: 0;
+    }
+
+    .product-info .category {        
+        margin: 0;
+    }
+
+    .product-info p {
+        font-size: 0.825vw;
+        margin-bottom: 0;
+    }
+
+    .color-picker {
+        justify-content: flex-end;
+    }
+
+    .product-overview {
+        margin: 1.5vh 0;
+    }
+
+    .product-info .price {
+        font-size: 1.5vw;
+    }
+    
+     #reduced {
+        font-size: 0.8vw;
+    }
+
+    .add-to-cart {
+        padding: 2vh 2.5vw;
+        font-size: 1.2vw;
+        margin-top: 0;
+    }
+
+    .color-picker button {
+        height: 80%;
+        width: auto;
+    }
+}
+
+@media (max-width: 426px) {
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product-info h1 {
+        font-size: 3.5vw;
+        margin: 0;
+    }
+
+    .product-info .category {
+        font-size: 2vw;
+        padding: 2% 4%;
+    }
+
+    .product-info p {
+        font-size: 1.6vw;
+        margin-bottom: 0;
+    }
+
+    .color-picker {
+        justify-content: flex-end;
+    }
+
+    .product-overview {
+        margin: 1.5vh 0;
+    }
+
+    .product-info .price {
+        font-size: 3vw;
+    }
+    
+     #reduced {
+        font-size: 1.6vw;
+    }
+
+    .add-to-cart {
+        padding: 2vh;
+        padding-right: 7vw;
+        font-size: 2vw;
+        margin-top: 0;
+    }
+
+    .add-to-cart i {
+        font-size: 2vw;
+        padding-right: 3vw;
+    }
+
+    .color-picker button {
+        height: 80%;
+        width: auto;
+    }
+}
